@@ -1,0 +1,22 @@
+*{
+    font-family: "Comic Sans MS";
+}
+h2{
+    text-align: center;
+    margin: 10px auto;
+}
+div{
+    border-bottom:5px grey solid;
+    margin:20px;
+}
+button{
+    border-radius:2px;
+    border:1px solid black;
+    background-color:white;
+    box-shadow:2px 5px;
+    margin:10px;
+}
+.red{
+    color:red;
+}
+/*button:nth*/

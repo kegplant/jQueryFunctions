@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery function testing</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#addClass').click(function(){
+                    $(this).parent('p').addClass("red");
+                    //alert('clicked');
+                    //$('p').css('color','red');
+                });
+                $('.slidetoggle').click(function(){
+                    $(this).parent('p').slideToggle();
+                });
+                $('div:nth-of-type(3) button').click(function(){
+                    //$(this).parent('p').slideToggle();
+                    //$(this).parent('p').hide();//slideUp();fadeOut();.html('<h3>abcde</h3>');
+                    
+                    $(this).parent('p').html('<h3>abcde</h3>');
+                    
+                });
+                $('h3').data('name','xyz');
+                console.log($('h3').data())
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>AddClass</h2>
+            <p>
+                <button id="addClass">AddClass</button> Click the button to ad class'red' to this paragraph
+            </p>
+        </div>
+        <div>
+            <h3>Slidetoggle</h3>
+            <p>
+                <button class="slidetoggle">Slidetoggle</button> Click the button to ad class'red' to this paragraph
+            </p>
+        </div>
+        <div>
+            <h2>Slidetoggle</h2>
+            <p>
+                <button class='append'>append</button> Click the button to ad class'red' to this paragraph
+            </p>
+            <label>
+                <input type="radio" name='test'> radio check;
+                <input type="radio" name='test'> radio check2;
+            </label>
+        </div>
+    </body>
+</html>
